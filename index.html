@@ -10,11 +10,11 @@ $(document).ready(function() {
 	$("#header").slideToggle(1);
 	$("#header").slideToggle(999);
 	$("#animateMe").hide();
-		$("#animateMe").show(1000);
-		$("#what").hide();
-		$("#what").show(2500);
-		$("#well").hide();
-		$("#well").show(3000);
+	$("#what").hide();
+	$("#well").hide();
+	setTimeout(function(){$("#animateMe").show(1000);},1000);
+	setTimeout(function(){$("#what").show(2500);},1000);
+	setTimeout(function(){$("#well").show(3000);},1000);
 });
 </script>
 <style type="text/css">
