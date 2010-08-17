@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>WOOOOOOOOOOOOOOOO!</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="scriptaculous-js-1.8.3/src/scriptaculous.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#header").slideToggle(1);
@@ -12,6 +13,14 @@ $(document).ready(function() {
 	setTimeout(function() {
 		$("#animateMe").show(1000);
 	},4000);
+	$("#what").hide();
+	setTimeout(function() {
+		$("#what").show(500);
+	},7000);
+	setTimeout(function(){
+		$("#well").show(3000);
+	},10000);
+	
 });
 </script>
 <style type="text/css">
@@ -23,24 +32,20 @@ body{
 }
 #animateMe{
 }
-#projects{
-	background-color:#666;
-	border-style:solid;
-	border:thin;
-	border-color:#000;
-	margin-top:3px;
-	margin-right:2px;
-	margin-left:auto;
-	width:50%;
-	position:fixed;
+#what{
+	margin-right:3px;
+	text-align:right;
 }
+
 </style>
 </head>
 
 <body>
 
 <h1 id="header">Welcome To My Page!</h1>
-<span id="animateMe">Now with extra awesome!</span>
-<p id="projects"><span><a href="" id="">Test</a></span></p>
+<span id="animateMe">Now with extra awesome!</span><br />
+<span id="what">What now?</span>
+<br />
+<span id="well">Well...</span>
 </body>
 </html>
