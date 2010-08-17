@@ -12,12 +12,14 @@ $(document).ready(function() {
 	$("#animateMe").hide();
 	$("#what").hide();
 	$("#well").hide();
+	$("#some").hide();
 	setTimeout(function(){$("#animateMe").show(1000);},2000);
 	setTimeout(function(){
 		$("#what").show(2500);
 	}
 	,4000);
 	setTimeout(function(){$("#well").show(3000);},6000);
+	setTimeout(function(){$("#some").show(1999);},12000);
 });
 </script>
 <style type="text/css">
@@ -33,6 +35,11 @@ body{
 	margin-right:3px;
 	text-align:right;
 }
+#some{
+	margin-right:10px;
+	margin-left:auto;
+	text-align:right;
+}
 
 </style>
 </head>
@@ -44,5 +51,6 @@ body{
 <span id="what" style="text-align:right;">What now?</span>
 <br />
 <span id="well">Well...</span>
+<div id="some">I Has Links!</div>
 </body>
 </html>
