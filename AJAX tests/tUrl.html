@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TinyUrlizer</title>
+<script type="text/javascript">
+function tiny(form){
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function(){
+		if(ajax.readyState==4 && ajax.status==200){
+			document.getElementById("tUrl").innerHTML=ajax.responseText;
+		}
+	}
+	ajax.open("GET","http://tinyurl.com/api-create.php?url="+form,true);
+	ajax.send();
+}
+</script>
+</head>
+
+<body>
+<form id="URLFORM" onsubmit="tiny(this)">
+<input type="text" />
+<input type="button" onmousedown="submit" value="Submit"/>
+</form>
+<br />Your tUrl:<div id="tUrl"></div>
+</body>
+</html>
