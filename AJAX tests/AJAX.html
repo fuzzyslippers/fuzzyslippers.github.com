@@ -4,15 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>First AJAX test ( ° .°)</title>
 <script type="text/javascript">
-function load(){
-	if (window.XMLHttpRequest){
-		xmlhttp=new XMLHttpRequest();
-	}
-	xmlhttp.onreadystatechange=function(){
-		if (xml.readyState==4 && xml.status==200){
-			document.getElementById("changer").innerHTML=xmlhttp.responseText;
-		}
-	}
+function load()
+{
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("changer").innerHTML=xmlhttp.responseText;
+    }
+  }
 xmlhttp.open("GET","OMG.txt",true);
 xmlhttp.send();
 }
