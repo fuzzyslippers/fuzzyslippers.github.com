@@ -12,9 +12,9 @@ function load(){
 		if (xml.readyState==4 && xml.status==200){
 			document.getElementById("changer").innerHTML=xmlhttp.responseText;
 		}
-	xmlhttp.open('GET',OMG.txt,true);
-	xmlhttp.send();
 	}
+xmlhttp.open("GET","OMG.txt",true);
+xmlhttp.send();
 }
 </script>
 </head>
