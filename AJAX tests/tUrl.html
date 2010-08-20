@@ -11,7 +11,7 @@ function tiny(form){
 			document.getElementById("tUrl").innerHTML=ajax.responseText;
 		}
 	}
-	ajax.open("GET","http://tinyurl.com/api-create.php?url="+form,true);
+	ajax.open("GET","http://tinyurl.com/api-create.php?url="+form+"&?ran="+math.random(),true);
 	ajax.send();
 }
 </script>
@@ -20,7 +20,7 @@ function tiny(form){
 <body>
 <form id="URLFORM" onsubmit="tiny(this)">
 <input type="text" />
-<input type="button" onmousedown="submit" value="Submit"/>
+<button type="submit">Submit</button>
 </form>
 <br />Your tUrl:<div id="tUrl"></div>
 </body>
