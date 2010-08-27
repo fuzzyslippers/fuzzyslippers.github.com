@@ -1,0 +1,1 @@
+osascript "music.scpt" && cd ../ && git add * && git commit -m "AutoUpdate for music script" && git push origin master
