@@ -1,1 +1,1 @@
-osascript "music.scpt" > music.txt && cd /Users/yoshi445511/fuzzyslippers.github.com/ && git add * && git commit -m "AutoUpdate for music script" && git push origin master
+osascript "/Users/yoshi445511/fuzzyslippers.github.com/music.scpt" > music.txt && cd /Users/yoshi445511/fuzzyslippers.github.com/ && git add * && git commit -m "AutoUpdate for music script" && git push origin master
